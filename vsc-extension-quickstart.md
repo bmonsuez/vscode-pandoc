@@ -23,7 +23,7 @@ We pass the function containing the implementation of the command as the second 
 
 ## Explore the API
 * you can open the full set of our API when you open the file `node_modules/vscode/vscode.d.ts`
-
+fse
 ## Run tests
 * open the debug viewlet (`Ctrl+Shift+D` or `Cmd+Shift+D` on Mac) and from the launch configuration dropdown pick `Launch Tests`
 * press `F5` to run the tests in a new window with your extension loaded
