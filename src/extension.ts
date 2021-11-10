@@ -11,8 +11,8 @@ function setStatusBarText(what, docType) {
 }
 
 function getZoteroLuaFilter() {
-  var filtersPath = path.dirname(path.dirname(__dirname)) + "/filters/zotero.lua";
-  return " --lua-filter=" + filtersPath + " --metadata=zotero_client:zotero ";
+  var filtersPath = path.dirname(path.dirname(__dirname)) + "/filters"
+  return " --lua-filter=" + filtersPath + "/zotero.lua" + " --lua-filter=" + filtersPath + "/pagebreak.lua" +" --metadata=zotero_client:zotero ";
 }
 
 function getPandocOptions(quickPickLabel) {
