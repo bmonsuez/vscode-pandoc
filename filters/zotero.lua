@@ -2069,6 +2069,7 @@ function Meta(meta)
   if config.transferable and not config.scannable_cite then
     error('Scannable-cite documents are not transferable')
   end
+  meta.zotero["client"] = 'zotero'
 
   if type(meta.zotero.client) == 'nil' then -- should never happen as the default is 'zotero'
     meta.zotero.client = 'zotero'

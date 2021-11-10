@@ -17,12 +17,11 @@ Two ways to run the extension. You need to have a markdown file open.
 
 Then choose from the list what document type you want to render and press `enter` (you can also type in the box rather than cursor around).
 
-[Enlarged version of the video](https://raw.githubusercontent.com/dfinke/vscode-pandoc/master/images/vscodePandoc.gif).
-
-![](https://raw.githubusercontent.com/dfinke/vscode-pandoc/master/images/vscodePandoc.gif)
 
 ## Releases
 
+* September 17, 2021
+  * Added zotero live citations.
 * October 6th, 2020
   * Add ability to specify pandoc binary thanks @feeper
   * Stops rendered document opening automatically thanks @bno93

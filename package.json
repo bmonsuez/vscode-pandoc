@@ -1,18 +1,19 @@
 {
 	"name": "vscode-pandoc",
 	"description": "Renders markdown through pandoc",
-	"version": "0.4.1",
-	"publisher": "Jacob Clarke",
+	"version": "0.4.2",
+	"author": "Jacob Clarke",
+	"publisher": "jacobclarke",
 	"icon": "images/logo.png",
 	"license": "SEE LICENSE",
 	"bugs": {
-		"url": "https://github.com/chrischinchilla/vscode-pandoc/issues",
-		"email": "chris@chrischinchilla.com"
+		"url": "https://github.com/j718/vscode-pandoc/issues",
+		"email": "jacobclarke718@gmail.com"
 	},
-	"homepage": "https://github.com/chrischinchilla/vscode-pandoc/blob/master/README.md",
+	"homepage": "https://github.com/j718/vscode-pandoc/blob/master/README.md",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/chrischinchilla/vscode-pandoc.git"
+		"url": "https://github.com/j718/vscode-pandoc"
 	},
 	"engines": {
 		"vscode": "^1.0.0"
@@ -97,13 +98,15 @@
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"vscode:prepublish": "tsc -p ./",
 		"compile": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"release": "vsce publish"
 	},
 	"devDependencies": {
-		"@types/node": "^6.0.40",
-		"typescript": "^2.0.3",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "^7.0.7",
+		"typescript": "^4.4.3",
 		"vscode": "^1.1.37"
 	}
 }

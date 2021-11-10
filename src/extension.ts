@@ -12,7 +12,7 @@ function setStatusBarText(what, docType) {
 
 function getZoteroLuaFilter() {
   var filtersPath = path.dirname(path.dirname(__dirname)) + "/filters/zotero.lua";
-  return " --lua-filter=" + filtersPath;
+  return " --lua-filter=" + filtersPath + " --metadata=zotero_client:zotero ";
 }
 
 function getPandocOptions(quickPickLabel) {
@@ -26,9 +26,9 @@ function getPandocOptions(quickPickLabel) {
       console.log("pdocOptstring = " + pandocOptions);
       break;
     case "docx":
-      pandocOptions = vscode.workspace
+      pandocOptions =  getZoteroLuaFilter() + vscode.workspace
         .getConfiguration("pandoc")
-        .get("docxOptString") + getZoteroLuaFilter();
+        .get("docxOptString")
       console.log("pdocOptstring = " + pandocOptions );
       break;
     case "html":
