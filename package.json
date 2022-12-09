@@ -2,21 +2,21 @@
 	"name": "vscode-pandoc",
 	"description": "Renders markdown through pandoc",
 	"version": "0.4.3",
-	"author": "Jacob Clarke",
-	"publisher": "jacobclarke",
+	"author": "Jacob Clarke, Bruno Monsuez",
+	"publisher": "bmonsuez",
 	"icon": "images/logo.png",
 	"license": "SEE LICENSE",
 	"bugs": {
-		"url": "https://github.com/j718/vscode-pandoc/issues",
-		"email": "jacobclarke718@gmail.com"
+		"url": "https://github.com/bmonsuez/vscode-pandoc/issues",
+		"email": "bruno.monsuez@gmail.com"
 	},
-	"homepage": "https://github.com/j718/vscode-pandoc/blob/master/README.md",
+	"homepage": "https://github.com/bmonsuez/vscode-pandoc/blob/master/README.md",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/j718/vscode-pandoc"
+		"url": "https://github.com/bmonsuez/vscode-pandoc"
 	},
 	"engines": {
-		"vscode": "^1.0.0"
+		"vscode": "^1.51.0"
 	},
 	"categories": [
 		"Other"
@@ -106,7 +106,7 @@
 	"devDependencies": {
 		"@types/mocha": "^9.0.0",
 		"@types/node": "^7.10.14",
-		"@types/vscode": "^1.69.0",
+		"@types/vscode": "^1.51.0",
 		"@vscode/test-electron": "^2.0.0",
 		"typescript": "^4.4.3"
 	}
