@@ -1550,7 +1550,7 @@ local function newparser(src, saxtbl)
 	}
 
 	--[[
-		public funcitons
+		public functions
 	--]]
 	local function run()
 		rec_depth = 0
@@ -1623,7 +1623,7 @@ function module.tablelength(T)
   return count
 end
 
-math.randomseed(os.clock()^5)
+math.randomseed(math.floor(os.clock()^5))
 function module.random_id(length)
   local id = ''
   for i = 1, length do

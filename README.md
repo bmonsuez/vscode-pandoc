@@ -20,6 +20,9 @@ Then choose from the list what document type you want to render and press `enter
 
 ## Releases
 
+* December 8, 2022
+  * Missing quotes on Windows when scripts path contained spaces
+  * Fixed randomseed type error in the zotero live citations script.
 * September 17, 2021
   * Added zotero live citations.
 * October 6th, 2020

@@ -10,9 +10,19 @@ function setStatusBarText(what, docType) {
   vscode.window.setStatusBarMessage(text, 1500);
 }
 
+function quotePathIfRequired(fullpath: string) {
+  if(process.platform === "win32" && fullpath.length > 0 
+    && fullpath.indexOf(" ") >= 0 && fullpath.charAt(0) != '"') {
+        return '"' + fullpath + '"'    
+  }
+  return fullpath
+}
+
 function getZoteroLuaFilter() {
   var filtersPath = path.dirname(path.dirname(__dirname)) + "/filters"
-  return " --lua-filter=" + filtersPath + "/zotero.lua" + " --lua-filter=" + filtersPath + "/pagebreak.lua" +" --metadata=zotero_client:zotero ";
+  return " --lua-filter=" + quotePathIfRequired(filtersPath + "/zotero.lua") 
+    + " --lua-filter=" + quotePathIfRequired(filtersPath + "/pagebreak.lua") 
+    +" --metadata=zotero_client:zotero ";
 }
 
 function getPandocOptions(quickPickLabel) {
@@ -78,7 +88,6 @@ function openDocument(outFile: string) {
       exec(outFile);
   }
 }
-
 
 
 function getPandocExecutablePath() {
